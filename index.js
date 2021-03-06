@@ -29,6 +29,8 @@ Object.defineProperty(pokemonApi, 'pokemonName', {
   get() {
     if(pokemonApi._pokemonName) {
       makeGetRequest.call(pokemonApi, `pokemon/${pokemonApi._pokemonName}`);
+    } else {
+      console.log('Pokémon name not set!');
     }
   },
   set(pokemonName) {
